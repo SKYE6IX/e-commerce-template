@@ -1,5 +1,5 @@
-import UnderlineLink from "@modules/common/components/underline-link"
-import Image from "next/image"
+import UnderlineLink from "@modules/common/components/underline-link";
+import Image from "next/image";
 
 const Hero = () => {
   return (
@@ -29,7 +29,7 @@ const Hero = () => {
         }}
       />
     </div>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

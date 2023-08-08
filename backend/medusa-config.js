@@ -29,7 +29,7 @@ const ADMIN_CORS =
 const STORE_CORS = process.env.STORE_CORS || "http://localhost:8000";
 
 const DATABASE_URL =
-  process.env.DATABASE_URL || "postgres://localhost/medusa-store";
+  process.env.DATABASE_URL || "postgres://localhost/medusa-db-7neix";
 
 const REDIS_URL = process.env.REDIS_URL || "redis://localhost:6379";
 
@@ -42,14 +42,12 @@ const plugins = [
       upload_dir: "uploads",
     },
   },
+  // To enable the admin plugin, uncomment the following lines and run `yarn add @medusajs/admin`
   {
     resolve: "@medusajs/admin",
     /** @type {import('@medusajs/admin').PluginOptions} */
     options: {
       autoRebuild: true,
-      develop: {
-        open: process.env.OPEN_BROWSER !== "false",
-      },
     },
   },
 ];
@@ -79,6 +77,8 @@ const projectConfig = {
   // Uncomment the following lines to enable REDIS
   // redis_url: REDIS_URL
 };
+
+
 
 /** @type {import('@medusajs/medusa').ConfigModule} */
 module.exports = {
